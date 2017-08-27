@@ -1,6 +1,6 @@
 # combine-tiles
 
-**Combine map tiles into a single large image.** Uses [GraphicsMagick](https://www.npmjs.com/package/gm). Similar to [abacus](https://github.com/mapbox/abaculus#abaculus).
+**Combine map tiles into a single large image.** Uses [GraphicsMagick](https://www.npmjs.com/package/gm). Similar to [abacus](https://github.com/mapbox/abaculus#abaculus) and [merge-tiles](https://github.com/stadt-bielefeld/merge-tiles#merge-tiles).
 
 [![npm version](https://img.shields.io/npm/v/combine-tiles.svg)](https://www.npmjs.com/package/combine-tiles)
 [![build status](https://img.shields.io/travis/derhuerst/combine-tiles.svg)](https://travis-ci.org/derhuerst/combine-tiles)
@@ -10,6 +10,8 @@
 
 ## Installing
 
+Make sure you have the `gm` binary from [GraphicsMagick](http://www.graphicsmagick.org) installed.
+
 ```shell
 npm install combine-tiles
 ```
@@ -18,8 +20,23 @@ npm install combine-tiles
 ## Usage
 
 ```js
-todo
+const combineTiles = require('combine-tiles')
+
+const size = 300
+const tiles = [
+	{x: 10, y: 0, file: '/path/to/10-0.png'},
+	{x: 11, y: 0, file: '/path/to/11-0.png'},
+	{x: 10, y: 1, file: '/path/to/10-1.png'},
+	{x: 11, y: 1, file: '/path/to/11-1.png'}
+]
+const dest = '/path/to/combined.png'
+
+combineTiles(tiles, size, size, dest, (err) => {
+	if (err) console.error(err)
+})
 ```
+
+You may want to use [tilebelt](https://github.com/mapbox/tilebelt#features) to convert bounding boxes into `[x, y, zoom]` tiles or [tile-cover](https://github.com/mapbox/tile-cover#tile-cover) to generate a list of tiles in a bounding box.
 
 
 ## Contributing
