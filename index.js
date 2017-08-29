@@ -3,7 +3,8 @@
 const minBy = require('lodash.minby')
 const maxBy = require('lodash.maxby')
 const sortBy = require('lodash.sortby')
-const gm = require('gm')
+const {exec} = require('child_process')
+const esc = require('any-shell-escape')
 
 const combineTiles = (tiles, tWidth, tHeight, dest, cb) => {
 	const offsetX = minBy(tiles, tile => tile.x).x
@@ -20,14 +21,19 @@ const combineTiles = (tiles, tWidth, tHeight, dest, cb) => {
 	const w = tWidth * cols
 	const h = tHeight * rows
 
-	const op = gm()
-	op.tile(cols, rows)
-	op.geometry('+0+0') // no border
-	for (let i = 0; i < index.length; i++) {
-		const tile = index[i]
-		op.montage(tile.file)
+	const op = ['gm', 'convert', '-background', 'transparent']
+	// todo: transparent background
+	for (let tile of index) {
+		const x = tile.x * tWidth
+		const y = tile.y * tHeight
+		op.push('-page', '+' + x + '+' + y, tile.file)
 	}
-	op.write(dest, cb)
+	op.push('-mosaic', dest)
+
+	exec(op.join(' '), {stdio: 'ignore'}, (err) => {
+		if (err) cb(err)
+		else cb()
+	})
 }
 
 module.exports = combineTiles

@@ -1,7 +1,7 @@
 {
 	"name": "combine-tiles",
 	"description": "Combine map tiles into a single large image.",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"main": "index.js",
 	"files": [
 		"index.js"
@@ -23,7 +23,7 @@
 		"node": ">=6"
 	},
 	"dependencies": {
-		"gm": "^1.23.0",
+		"any-shell-escape": "^0.1.1",
 		"lodash.maxby": "^4.6.0",
 		"lodash.minby": "^4.6.0",
 		"lodash.sortby": "^4.7.0"
