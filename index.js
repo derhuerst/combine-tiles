@@ -30,7 +30,7 @@ const combineTiles = (tiles, tWidth, tHeight, dest, cb) => {
 	}
 	op.push('-mosaic', dest)
 
-	exec(op.join(' '), {stdio: 'ignore'}, (err) => {
+	exec(esc(op), {stdio: 'ignore'}, (err) => {
 		if (err) cb(err)
 		else cb()
 	})
