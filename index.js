@@ -43,7 +43,6 @@ const combineTiles = (tiles, tWidth, tHeight, dest, cb) => {
 		.png()
 		.toFile(dest)
 	})
-	.then(cb, cb)
 }
 
 module.exports = combineTiles
