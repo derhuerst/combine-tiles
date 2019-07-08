@@ -3,3 +3,6 @@ node_js:
   - 'stable'
   - 'lts/*'
   - '6'
+script:
+  - node example/index.js
+  - ls -lh example/combined.png
