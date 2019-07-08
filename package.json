@@ -20,12 +20,12 @@
 	"bugs": "https://github.com/derhuerst/combine-tiles/issues",
 	"license": "ISC",
 	"engines": {
-		"node": ">=6"
+		"node": ">=8"
 	},
 	"dependencies": {
-		"any-shell-escape": "^0.1.1",
 		"lodash.maxby": "^4.6.0",
 		"lodash.minby": "^4.6.0",
-		"lodash.sortby": "^4.7.0"
+		"lodash.sortby": "^4.7.0",
+		"sharp": "^0.22.1"
 	}
 }

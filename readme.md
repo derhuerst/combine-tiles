@@ -1,6 +1,6 @@
 # combine-tiles
 
-**Combine map tiles into a single large image.** Uses [GraphicsMagick](https://www.npmjs.com/package/gm). Similar to [abacus](https://github.com/mapbox/abaculus#abaculus) and [merge-tiles](https://github.com/stadt-bielefeld/merge-tiles#merge-tiles).
+**Combine map tiles into a single large image.** Uses the great [`sharp` package](https://www.npmjs.com/package/sharp) for efficiency. Similar to [abacus](https://github.com/mapbox/abaculus#abaculus) and [merge-tiles](https://github.com/stadt-bielefeld/merge-tiles#merge-tiles).
 
 [![npm version](https://img.shields.io/npm/v/combine-tiles.svg)](https://www.npmjs.com/package/combine-tiles)
 [![build status](https://img.shields.io/travis/derhuerst/combine-tiles.svg)](https://travis-ci.org/derhuerst/combine-tiles)
@@ -10,8 +10,6 @@
 
 
 ## Installing
-
-Make sure you have the `gm` binary from [GraphicsMagick](http://www.graphicsmagick.org) installed.
 
 ```shell
 npm install combine-tiles
