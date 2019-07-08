@@ -18,6 +18,8 @@ npm install combine-tiles
 
 ## Usage
 
+Check out the [`example` directory](example)!
+
 ```js
 const combineTiles = require('combine-tiles')
 

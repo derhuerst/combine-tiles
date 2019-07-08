@@ -1,10 +1,11 @@
 {
 	"name": "combine-tiles",
 	"description": "Combine map tiles into a single large image.",
-	"version": "0.2.2",
+	"version": "1.0.0",
 	"main": "index.js",
 	"files": [
-		"index.js"
+		"index.js",
+		"example"
 	],
 	"keywords": [
 		"tiles",
