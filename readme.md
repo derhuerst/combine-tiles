@@ -6,6 +6,7 @@
 [![build status](https://img.shields.io/travis/derhuerst/combine-tiles.svg)](https://travis-ci.org/derhuerst/combine-tiles)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/combine-tiles.svg)
 [![chat on gitter](https://badges.gitter.im/derhuerst.svg)](https://gitter.im/derhuerst)
+[![support me on Patreon](https://img.shields.io/badge/support%20me-on%20patreon-fa7664.svg)](https://patreon.com/derhuerst)
 
 
 ## Installing
@@ -24,10 +25,10 @@ const combineTiles = require('combine-tiles')
 
 const size = 300
 const tiles = [
-	{x: 10, y: 0, file: '/path/to/10-0.png'},
-	{x: 11, y: 0, file: '/path/to/11-0.png'},
-	{x: 10, y: 1, file: '/path/to/10-1.png'},
-	{x: 11, y: 1, file: '/path/to/11-1.png'}
+	{x: 0, y: 0, file: '/path/to/0-0.png'},
+	{x: 1, y: 0, file: '/path/to/1-0.png'},
+	{x: 0, y: 1, file: '/path/to/0-1.png'},
+	{x: 1, y: 1, file: '/path/to/1-1.png'}
 ]
 const dest = '/path/to/combined.png'
 
