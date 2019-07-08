@@ -1,8 +1,8 @@
 'use strict'
 
-const minBy = require('lodash.minby')
-const maxBy = require('lodash.maxby')
-const sortBy = require('lodash.sortby')
+const minBy = require('lodash/minBy')
+const maxBy = require('lodash/maxBy')
+const sortBy = require('lodash/sortBy')
 const sharp = require('sharp')
 
 const background = {r: 255, g: 255, b: 255}

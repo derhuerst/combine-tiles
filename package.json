@@ -23,9 +23,7 @@
 		"node": ">=8"
 	},
 	"dependencies": {
-		"lodash.maxby": "^4.6.0",
-		"lodash.minby": "^4.6.0",
-		"lodash.sortby": "^4.7.0",
+		"lodash": "^4.17.11",
 		"sharp": "^0.22.1"
 	}
 }
