@@ -21,10 +21,10 @@
 	"bugs": "https://github.com/derhuerst/combine-tiles/issues",
 	"license": "ISC",
 	"engines": {
-		"node": ">=8"
+		"node": ">=14"
 	},
 	"dependencies": {
 		"lodash": "^4.17.11",
-		"sharp": "^0.23.1"
+		"sharp": "^0.29.1"
 	}
 }
