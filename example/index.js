@@ -13,7 +13,9 @@ const tiles = [
 const dest = join(__dirname, 'combined.png')
 
 combineTiles(tiles, size, size, dest)
-.catch((err) => {
+.then(() => {
+	console.info(`created combined tile ${dest}.`)
+}, (err) => {
 	console.error(err)
 	process.exit(1)
 })
