@@ -3,7 +3,6 @@
 **Combine map tiles into a single large image.** Uses the great [`sharp` package](https://www.npmjs.com/package/sharp) for efficiency. Similar to [abacus](https://github.com/mapbox/abaculus#abaculus) and [merge-tiles](https://github.com/stadt-bielefeld/merge-tiles#merge-tiles).
 
 [![npm version](https://img.shields.io/npm/v/combine-tiles.svg)](https://www.npmjs.com/package/combine-tiles)
-[![build status](https://img.shields.io/travis/derhuerst/combine-tiles.svg)](https://travis-ci.org/derhuerst/combine-tiles)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/combine-tiles.svg)
 [![support me via GitHub Sponsors](https://img.shields.io/badge/support%20me-donate-fa7664.svg)](https://github.com/sponsors/derhuerst)
 [![chat with me on Twitter](https://img.shields.io/badge/chat%20with%20me-on%20Twitter-1da1f2.svg)](https://twitter.com/derhuerst)
