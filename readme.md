@@ -31,8 +31,7 @@ const tiles = [
 ]
 const dest = '/path/to/combined.png'
 
-combineTiles(tiles, size, size, dest)
-.catch(console.error)
+await combineTiles(tiles, size, size, dest)
 ```
 
 You may want to use [tilebelt](https://github.com/mapbox/tilebelt#features) to convert bounding boxes into `[x, y, zoom]` tiles or [tile-cover](https://github.com/mapbox/tile-cover#tile-cover) to generate a list of tiles in a bounding box.

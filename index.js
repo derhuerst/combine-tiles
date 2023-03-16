@@ -7,7 +7,7 @@ const sharp = require('sharp')
 
 const background = {r: 255, g: 255, b: 255}
 
-const combineTiles = (tiles, tWidth, tHeight, dest, cb) => {
+const combineTiles = async (tiles, tWidth, tHeight, dest) => {
 	const offsetX = minBy(tiles, tile => tile.x).x
 	const offsetY = minBy(tiles, tile => tile.y).y
 	const makeRelative = (tile) => ({
@@ -27,22 +27,21 @@ const combineTiles = (tiles, tWidth, tHeight, dest, cb) => {
 	const w = tWidth * cols
 	const h = tHeight * rows
 
-	return sharp(index[0].file)
-	.metadata()
-	.then(({channels}) => {
-		return sharp({
-			create: {
-				width: tWidth * cols,
-				height: tHeight * rows,
-				channels,
-				background
-			}
-		})
-		.composite(index.map(toCompositeOp))
-		// todo: accept more libvips options, e.g. format
-		.png()
-		.toFile(dest)
+	const {
+		channels,
+	} = await sharp(index[0].file).metadata()
+	await sharp({
+		create: {
+			width: tWidth * cols,
+			height: tHeight * rows,
+			channels,
+			background,
+		},
 	})
+	.composite(index.map(toCompositeOp))
+	// todo: accept more libvips options, e.g. format
+	.png()
+	.toFile(dest)
 }
 
 module.exports = combineTiles
